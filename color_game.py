@@ -2,10 +2,9 @@ import pygame
 import random
 import sys
 
-# Initialize Pygame
 pygame.init()
 
-# Screen settings (updated resolution)
+# Screen settings 
 WIDTH, HEIGHT = 1280, 800
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Color Guessing Game")
@@ -54,7 +53,7 @@ def new_round():
 def draw_screen(color_value, buttons, score, rounds, max_rounds):
     SCREEN.fill((255, 255, 255))
 
-    # Bigger color square (300x300)
+    
     square_size = 300
     square_x = WIDTH // 2 - square_size // 2
     square_y = 100
@@ -91,7 +90,7 @@ def main():
         correct_color, color_value, options = new_round()
         rounds += 1
 
-        # Spread buttons further apart on larger screen
+        
         start_y = 450
         button_height = 50
         spacing = 60
